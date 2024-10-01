@@ -1,0 +1,196 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Javaゲームプログラミング</title>
+<base target="_self">
+</head>
+
+<body bgcolor="#008000" text="#FFFFFF" link="#FFFF00" vlink="#00FFFF" alink="#FF0000">
+
+<p align="center"><b><font size="6">第0章</font></b></p>
+
+<hr>
+
+<blockquote>
+  <p align="left">Javaについて思うこと</p>
+  <p align="left">　プログラムを作ってみたいと思っている人、プログラミングの勉強をしている人なら、「Java」という言葉を聞いた事があるでしょう。C/C++言語と肩を並べる勢いで、近年注目されているプログラミング言語です。<br>
+  　Javaは、家電や携帯端末などにソフトウェアを組み込むために、米 Sun Microsystems 社で開発が始まりました。当初の目的とは多少ズレることになりましたが、1995年に、HTML文書にプログラムを埋め込んで動作させるしくみ「Applet」と、それを実装したWebブラウザ「HotJava」が発表され、一躍世界中の注目を集めます。以降、大幅な改良を伴いながらも、利用される分野を増やし続け、現在では、組み込み用途に限らず、様々なプラットフォーム上でソフトウェアを動作させるための環境として利用されています。<br>     
+  　代表的なJavaの利点として<br>
+  ・単一の実行形式ファイル(プログラム)が、Windows、Mac、Linux(Unix)上で動く<br>
+  ・Webブラウザ上で動作する「Applet」、Webサーバ上で動作する「Servlet」、携帯電話上で動作する「iアプリ」「MIDlet」などといった様々な形態のプログラムを、単一の言語で開発できる<br>
+  ・インターネットをはじめとするIPネットワーク上での通信を標準でサポートしている<br>
+  といったものを挙げる事が出来るでしょう。<br>
+  　このように大変魅力的なJavaですが、それほど簡単に使いこなせるわけではありません。C言語に比べ言語としての機能が盛り沢山なので、C言語の標準仕様であるANSI-Cと比較して、難しいと感じる人が殆んどでしょう。特に、標準でグラフィクスをサポートしないC/C++言語とは違い、標準でGUIをサポートしている点に関しては、入門書を読んだ程度では十分な知識を得られないと思います。個人的には、非常に低レベルなグラフィクス処理が簡単に行えないように感じます。<br>
+  　また、Javaは現在進行形で開発が進められている言語です。仕様が変更されたり、以前は使えなかった便利な機能が付加されたりし続けています。このため、早くから注目を集めた割には、まだ実用的ではないと判断する人が多く、実際に開発に利用する人が増えませんでした。実際の開発に使われたり、言語を勉強する人が増えたのは、この2、3年ではないでしょうか?<br>
+  　Javaは、コンピュータで動くソフトウェアを作る道具として優れた面を多く持っています。コンピュータの利用分野、利用形態の拡大や、ネットワーク化など、最近のコンピュータを取り巻く状況に対応した優れた道具です。しかし、万能ではありません。十分な経験もなくJavaに適さない開発案件にJavaを用いるべきではありません。でも、よくよく吟味した上でも、やっぱりJavaで開発するメリットのあるソフトウェアはいくらでもあるのです。<br>
+  　Javaは注意深く使えば大変優れた道具となり得ます。Javaの特徴を考えると、特に職業としてプログラマをしている人、それを目指す人の強力な武器となるでしょう。何か良さげなイメージが先行しがちなJavaですが、目的意識を持って取り組むことで、その実像が見えてくるのではないでしょうか?</p>
+  <p align="left">Javaを取り巻く世界</p>
+  <p align="left">　どこに行ってもコンピュータを見かける世の中になりました。1995年以降の爆発的なパーソナルコンピュータ(PC)とインターネットの普及がなければ、この本を読んでいるアナタもプログラミングと無縁な一生を送っていたかも知れません。世の中にコンピュータが溢れかえっているからこそ、この本のような書籍が書店の棚を大きく占有し、たくさん売れている(予定な)わけです。このコンピュータだらけの世の中で、プログラミング言語Javaとはどんな位置に立つのでしょう?<br>
+  　プログラミングは一種の創作活動と捉える事が出来ますが、現代における創作活動の多くがそうであるように、その殆んどが経済活動でもあります。プログラミングを商売として考えるなら、沢山売れるソフトウェアを作る事が良い事ですよね。とすると、なるべく多くの人に使ってもらえるソフトウェアをプログラミングする事が良い事になります。金銭の授受を伴わないプログラミングであっても、その多くはボランティア精神や自己顕示欲を満たす為(笑)だったりするので、やはり多くの人に使ってもらえるソフトウェアをプログラミングしたいと考えるはずです。<br>
+  　そう考えると、「Write once, Run Anyware」(1度書けば、どこでも動く)を標榜するJavaの利点が明らかになりますよね。Windows用に作られたソフトウェアは、Windowsユーザにしか使ってもらえませんが、Javaで作られたソフトウェアなら、ほとんどのPC上で動作し、より多くの人に使ってもらえる可能性があるのです。</p>     
+  <p align="left">Javaの利用者</p>
+  <p align="left">　では実際のところ、Javaで作ったソフトウェアを使ってくれそうな人は、日本にどのくらいいるのでしょう? PCやインターネットの利用者数について見てみましょう。</p>    
+  <table border="1" cellspacing="1">
+    <col width="252" style="mso-width-source:userset;mso-width-alt:8064;width:189pt">
+    <col width="99" style="mso-width-source:userset;mso-width-alt:3168;width:74pt">
+    <col width="150" style="mso-width-source:userset;mso-width-alt:4800;width:113pt">
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt;width:189pt">日本国内のインターネットの利用者数</td>
+      <td class="xl24" style="border-left:none;width:74pt"><ruby>
+        人数<span style="display:none"><rt>
+        </rt>
+        </span></ruby>
+      </td>
+      <td class="xl24" style="border-left:none;width:113pt">
+        総人口に占める割合
+      </td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt;border-top:none">インターネット利用者数
+      </td>
+      <td class="xl24" style="border-top:none;border-left:none">5670<ruby>
+        万人<span style="display:none"><rt>   
+        </rt>
+        </span></ruby>
+      </td>
+      <td class="xl25" style="border-top:none;border-left:none" x:num="0.44400000000000001">44.4%</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt;border-top:none">
+        自宅PCでのインターネット利用者数
+      </td>
+      <td class="xl24" style="border-top:none;border-left:none">4144<ruby>
+        万人<span style="display:none"><rt>   
+        </rt>
+        </span></ruby>
+      </td>
+      <td class="xl25" style="border-top:none;border-left:none" x:num="0.32500000000000001">32.5%</td>
+    </tr>
+  </table>
+  <p align="left">　 <a href="http://www.vrnetcom.co.jp/"> (株)ビデオリサーチネットコム</a>が2003年4月に行ったインターネット普及状況調査では、日本国内のインターネット利用者の総数を5670万人と見積もっています。<a href="http://www.stat.go.jp/">総務省統計局・統計センター</a>の日本統計月報によると、2003年4月時点での日本の総人口は1億2756万人なので、日本人のうち約4割の人がインターネット利用者と言う事になります。この数字には、メール機能付の携帯電話利用者等も含まれていますので、自宅のPCでの利用者に限定した数字をみると、同調査では4144万人と見積もられています。この数字でも、日本人の3割が自宅のPCでインターネットを利用しているという事になります。</p>   
+  <table border="1" cellspacing="1">
+    <col width="182" style="mso-width-source:userset;mso-width-alt:5824;width:137pt">
+    <col width="88" style="mso-width-source:userset;mso-width-alt:2816;width:66pt">
+    <tr height="19" style="height:14.25pt">
+      <td style="height:14.25pt;width:137pt" colspan="2">
+        消費動向調査結果(抜粋)</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt">調査項目</td>
+      <td class="xl24" style="border-left:none">世帯普及率</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt;border-top:none">パソコン</td>
+      <td class="xl25" style="border-top:none;border-left:none" x:num="0.6331">63.3%</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt;border-top:none">ファクシミリ</td>
+      <td class="xl25" style="border-top:none;border-left:none" x:num="0.42799999999999999">42.8%</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt;border-top:none">CDプレーヤー</td>
+      <td class="xl25" style="border-top:none;border-left:none" x:num="0.60299999999999998">60.3%</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt;border-top:none">カラーテレビ</td>
+      <td class="xl25" style="border-top:none;border-left:none" x:num="0.99399999999999999">99.4%</td>
+    </tr>
+  </table>
+  <p align="left">　また、2003年3月に<a href="http://www.cao.go.jp/">内閣府</a>が行った消費動向調査では、PCの世帯普及率が63.3%で、CDプレーヤー(60.3%)以上の普及率となっています。<br>
+  　こうした数字の捉え方、感じ方は人それぞれでしょうが、少なくともPCはマニアの為だけの道具ではなくなったと言えます。Javaが透過的にインターネットを扱う事や、利用者の多いWebブラウザ上で動作する「Applet」の事を考えると、PCとインターネットを利用している4144万もの人々が、PC用にJavaで作られたソフトウェアを利用する可能性の高い人達と言えるでしょう。</p>
+  <p align="left">Windows vs Mac</p>     
+  <p align="left">　PC用にJavaで作られたソフトウェアを利用するかも知れない人達が大勢いるのは分かりました。しかし、それらの人々が全員同じOS(要はWindows)を使っているのなら、Javaでソフトウェアを作らなくても、Windows専用のソフトウェアを作ればよい事になります。実際、Windowsを使っている人とMacを使っている人の割合は、どのような数字になっているのでしょう?</p>
+  <table border="1" cellspacing="1">
+    <tr height="19" style="height:14.25pt">
+      <td style="height:14.25pt;width:94pt" colspan="3">国内PC出荷台数
+      </td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt">2000年度
+      </td>
+      <td class="xl24" style="border-left:none">2001年度</td>
+      <td class="xl24" style="border-left:none">2002年度</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt;border-top:none">1210万2000台
+      </td>
+      <td class="xl24" style="border-top:none;border-left:none">1068万6000台</td>
+      <td class="xl24" style="border-top:none;border-left:none">984万台
+      </td>
+    </tr>
+  </table>
+  <p align="left">　<a href="http://www.jeita.or.jp/">(社)電子情報技術産業協会</a>では、国内でPCを出荷している主要な企業の協力の下、四半期毎の出荷台数の統計を取り、情報を公開しています。この統計にはアップルコンピュータ(株)も協力しているので、この資料の数字は、日本国内に出荷されたWindows機、Mac機の合計だと見ることができます。</p>
+  <table border="1" cellspacing="1">
+    <tr height="19" style="height:14.25pt">
+      <td style="height: 14.25pt">国内Mac出荷台数</td>
+      <td>　</td>
+      <td>　</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height: 15.0pt">2000年度
+      </td>
+      <td class="xl24" style="border-left-style: none; border-left-width: medium">2001年度
+      </td>
+      <td class="xl24" style="border-left-style: none; border-left-width: medium">2002年度</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height: 15.0pt; border-top-style: none; border-top-width: medium">48万9000台
+      </td>
+      <td class="xl24" style="border-left-style: none; border-left-width: medium; border-top-style: none; border-top-width: medium">45万4000台
+      </td>
+      <td class="xl24" style="border-left-style: none; border-left-width: medium; border-top-style: none; border-top-width: medium">33万6000台
+      </td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl25" style="height: 15.0pt; border-top-style: none; border-top-width: medium" x:num="4.0399999999999998E-2">4.04%</td>
+      <td class="xl25" style="border-left-style: none; border-left-width: medium; border-top-style: none; border-top-width: medium" x:num="4.2500000000000003E-2">4.25%</td>
+      <td class="xl25" style="border-left-style: none; border-left-width: medium; border-top-style: none; border-top-width: medium" x:num="3.4099999999999998E-2">3.41%</td>
+    </tr>
+  </table>
+  <p align="left">　一方、<a href="http://www.apple.com/pr/">米国アップルコンピュータのプレス向け資料</a>として提供されている四半期毎の出荷台数を見ると、日本市場での出荷台数が記されています。<br>
+  　2つの資料の、2000年度、2001年度、2002年度それぞれの出荷台数から、日本国内でのMacのシェアを計算してみると、4%程度である事が分かります。これは出荷台数による数字なので、個人使用のPCにも当てはまると言い切れません。しかし、それほど遠い数字ではないでしょう。<br>
+  　この数字を小さいと考えるなら、アナタの作るソフトウェアがMacで動作しなくてもよいと考える事になり、Javaでプログラミングする事の利点の1つは失われます。しかし、Macもカバーしたいとアナタが思える数字であれば、Javaに取り組む理由の一つとなりますね。<br>
+  　えてして技術者というものは、自分の仕事や技能にどれぐらいの経済価値があるのか考えない傾向があります。Javaを取り巻く世界を、実際の数字を見ながら検証してみましたが、たまにはこうした世界の見方をしてみるのも必要ではないでしょうか?</p>
+  <p align="left">Javaのバージョン</p>
+  <p align="left">　意気込んでJavaに取り組みはじめても、いろいろな障害が待ち構えています。言語や概念の習得の中に、そうした障害があるのはもちろんですが、最近のプログラミング環境でよくぶつかるのが「動くハズなのに動かない」という問題です。例えば、ライブラリのバグ、ハードウェアの差異を動作環境(OS)が吸収し切れていないといった原因から、自分のPCでは動くのに友人のPCでは動かない現象がよく起こります。Windowsプログラミングの経験がある人なら、1度は経験しているのではないでしょうか?<br>
+  　Javaは、OS上で直接動作するのではなくJVM (Java仮想機械)を動作環境としているため、OSの差異による動作不良を起こしにくい特徴があります(※)。正しく実装されたJVMがあれば、OSやハードウェア構成の影響を受けずに、ソフトウェアを実行できるようになっているのです。現実にはプラットフォーム間でのJVMの差異もあるのですが、PCが暴走したりといった深刻な不具合が発生することは稀です。最近の肥大化したネイティブコードのソフトウェアでは、同系列のOS上ですら動作不良を起こす事が少なくありませんから、この利点の恩恵は大きいですよね。<br>  
+  　しかしそんなJavaにも、問題がないわけではありません。OSやハードウェアの差異を吸収してくれる一方で、Javaのバージョンの差異が問題になる場合があるのです。</p>  
+  <table border="1" cellspacing="1">
+    <tr height="19" style="height:14.25pt">
+      <td colspan="5" style="height:14.25pt;mso-ignore:colspan;
+  width:351pt">本稿執筆時点で主要プラットフォーム上に提供されているJavaのバージョン</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt">Windows (Sun製)</td>  
+      <td class="xl24" style="border-left:none">Windows（Microsoft VM）</td>  
+      <td class="xl24" style="border-left:none">Linux</td>
+      <td class="xl24" style="border-left:none">MacOSX</td>
+      <td class="xl24" style="border-left:none">MacOS8.x,9.x</td>
+    </tr>
+    <tr height="20" style="height:15.0pt">
+      <td class="xl24" style="height:15.0pt;border-top:none">1.4.2_03</td>
+      <td class="xl24" style="border-top:none;border-left:none">1.1.4</td>
+      <td class="xl24" style="border-top:none;border-left:none">1.4.2_03</td>
+      <td class="xl24" style="border-top:none;border-left:none">1.4.1</td>
+      <td class="xl24" style="border-top:none;border-left:none">1.1.8 (MRJ2.2.6)</td>
+    </tr>
+  </table>
+  <p align="left">　Javaは現在も開発が続けられている開発・実行環境です。このため、Javaを利用出来る全ての開発環境で、必ず最新版が提供されているとは限りません。上の表にあるように、OSが異なったり、OSのバージョンが異なると、利用出来るJavaのバージョンが変わってしまうのです。バージョンが上がると、機能が追加・強化されるので、バージョン1.4.2_03の環境で開発した、最新の機能を使用したソフトウェアが、バージョン1.1.6の環境では動作しなくなってしまいます。バージョンが上がる際に仕様が変更される事もあるので、逆にバージョン1.1.6の環境で開発したソフトウェアが、バージョン1.4.2_03の環境で推奨されないクラスやメソッドを使用する事になってしまうかも知れません。<br>
+  　Javaを使って開発を行う際には、最新のバージョンに気を配るだけでなく、様々なプラットフォーム上で動作するように注意する必要もあります。Javaをコンソールに対する標準入出力しか持たないANSI-Cと同じレベルで使うか、特定のプラットフォーム上でしか使わないのであれば、Javaのバージョンに注意する必要はありません。しかし「Write once, Run Anyware」を実現するのであれば、それなりの労力を払わなければなりません。</p>   
+  <p align="left">
+  ※最近のJavaでは、ハードウェアに依存する機能や、直接ハードウェアを操作する機能を充実させようとする方向への拡張が見られます。こうした機能を利用すると、動作環境の差異による影響を強く受けてしまいます。</p>  
+  <p align="left">Javaでゲームを作ってみよう</p>  
+  <p align="left">　Javaの入門書を読んで簡単なプログラミングをしただけでは、複雑で高機能で「Write once, Run Anyware」なソフトウェアを作る事は難しいでしょう。Javaは確かに魅力的な環境を与えてくれますが、万能ではないのです。<br>   
+  　それなりの労力を払ってJavaを使うのですから、Javaを使うメリットのあるソフトウェアを作るのが賢明でしょう。そうしたメリットのある分野として、今、最も注目されているのは、インターネットやLANを使って、様々な種類のコンピュータでサービスを受けられるように設計されたビジネスアプリケーションでしょう。サーバ側とクライアント側のソフトウェアが、データ通信を行いながら協調動作するタイプのソフトウェアです。ビジネスアプリケーションでは、Javaでプログラミングの面倒な高速なグラフィクス処理などが必要ないので、そういった面からもJavaでのプログラミングに向いていると言えます。<br>
+  　一方、コンピュータゲームの世界では、急速に普及したネットワーク環境を利用して、1人で遊ぶゲームから、皆で遊ぶゲームへと、プレイヤーの興味が広がりつつあります。1人遊びとしてのゲームしかなかったコンピュータゲームの黎明期、複数のプレイヤーが互いに技を競う対戦ゲームの時代を経て、皆で集まらなくても対戦や協力が出来るネットワークゲームの時代が来たのかも知れません。ネットワークを利用したゲームを開発しようと考えた場合、なんら追加する事無く、高機能なネットワーク機能が利用出来るJavaを使ってみるのはどうでしょう?<br>
+  　また、秋葉原なんかでPCゲームの棚を見てみると、殆んどがWindows専用です。Windows以外のPCプラットフォームで遊べるゲームが大変少ないのです。Macしか持ってないけどゲームも遊んでみたいという人達には、ゲームを遊ぶという選択肢が与えられていないのと同然なのです。これは、Windows専用の開発環境でゲームを作っている事が原因と考えられます。Windows専用のプログラム開発と同時に、Mac専用のプログラムを開発するには、余計にコストが必要となるからです。もし、Javaで開発したらどうでしょう? プラットフォーム毎にかかる開発コストを押さえられる可能性が高くなりますよね。<br>   
+  　そういう事をつらつら考えてみて、Javaでゲームを作ってみようと思うのです。</p>
+</blockquote>
+
+</body>         
+         
+</html>         
